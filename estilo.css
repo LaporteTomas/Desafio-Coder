@@ -1,0 +1,129 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #000000 0%, #04619f 74%);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+}
+h2{
+    font-size: 1.6rem    
+}
+.contenedor{
+    background-color: #e3efe8;
+    background-image: linear-gradient(315deg, #e3efe8 0%, #96a7cf 74%);
+    padding: 15px;
+    margin: 10px auto;
+    width: 98%; 
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 4fr);
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+    "header header header header"
+    "menu menu menu menu"
+    "contenido contenido contenido contenido"
+    "caja1 caja1 caja1 caja1"
+    "caja2 caja2 caja2 caja2"
+    "footer footer footer footer" 
+    ;
+}
+.header{
+    background-color: navy;
+    color: white;
+    grid-area: header;
+    padding: 20px;
+    border-radius: 4px;
+}
+.menu ul{
+    list-style: none;
+    display: flex;
+}
+.menu ul li a{
+    text-decoration: none;
+    padding: 1.5rem;
+    font-weight: bold;
+    transition: all .5s ease;
+
+}
+.menu{
+    background-color: lightblue;
+    grid-area: menu;
+    display: grid;   
+    align-items: center;
+    width: 1100px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 3px;
+}
+.menu ul li a:hover{
+    color: #000;
+    background-color: #fff;
+}
+
+.contenido{
+    padding: 10px;
+    border-radius: 4px;
+    line-height: 1.5;
+    grid-area: contenido;   
+}
+.caja1, .caja2{
+    padding: 20px;
+    border: 4px;
+    color: white;
+}
+.caja1{
+    grid-area: caja1;
+}
+.caja2{
+    grid-area: caja2;
+}
+footer{
+    background-color: navy;
+    color: white;
+    grid-area: footer;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+img{
+    width: 1180px;
+    height: 300px;
+    opacity: .5;
+    border: 2px double #a0a0a0;
+    max-width: 1280px;
+}
+img:hover{
+    opacity: 1;
+    border: solid white;
+    transition: all .5s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .contenedor{
+        gap: 0.7rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+    "header header header"
+    "contenido contenido contenido"
+    "sidebar sidebar sidebar"
+    "caja1 caja2 caja2"
+    "footer footer footer" 
+    ;}
+    h1{
+        font-size: 1.5rem;
+    }
+    h2{
+        font-size: 1.2rem;
+    }
+    .footer{
+        background-color: aquamarine;
+    }
+}
